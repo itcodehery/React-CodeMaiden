@@ -1,0 +1,22 @@
+.listTile {
+    width: 60vb;
+    display: flex;
+    text-transform: capitalize;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.1);
+    align-items: start;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
