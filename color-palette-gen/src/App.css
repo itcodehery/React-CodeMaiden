@@ -1,0 +1,54 @@
+:root {
+  background-color: rgb(33, 33, 33);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  display: grid;
+  place-items: center;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 14px;
+  border: 2px solid rgba(255, 255, 255, 0.121);
+  background-color: rgb(47, 0, 0);
+  box-shadow: none;
+  color: aliceblue;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+button:hover {
+  /* make it move */
+  transform: translate(-2px, -2px);
+  box-shadow: 0 0 4px rgba(67, 0, 0, 0.3);
+  color: white;
+}
+
+button:active {
+  transform: translate(0px, 0px);
+}
+
+.palette {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.appbar {
+  min-width: 780px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.colorblock {
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+}
