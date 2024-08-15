@@ -1,13 +1,18 @@
+import { useState } from "react";
+
 function ListGroup() {
   const items = ["Item 1", "Item 2", "Item 3"];
 
-  //   function handleClick(item: string) {
-  //     console.log(item);
-  //   } // by convention, this is not the way to declare functions
+  // const handleClick = (index: number) => {
+  //   selectedIndex = index;
+  //   console.log(items[selectedIndex]);
+  // };
 
-  const handleClick = (item: string) => {
-    console.log(item);
-  }; // this is the way to declare functions
+  // A Hook: function that allows us to use React Features
+  // arr[0] is the variable
+  // arr[1] is the updater function
+  //const arraY = useState(-1);
+  const [selectedIndex, changeIndex] = useState(-1);
 
   return (
     <>
@@ -17,10 +22,12 @@ function ListGroup() {
         {items.map((item, index) => (
           <li
             key={index}
-            className="list-group-item"
-            onClick={() => {
-              handleClick(item);
-            }}
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
+            onClick={() => changeIndex(index)}
           >
             {item}
           </li>
