@@ -1,10 +1,10 @@
-import Message from "./Message";
-import ListGroup from "./components/ListGroup.tsx";
+import Alert from "./components/Alert";
 function App() {
   return (
     <div>
-      <Message />
-      <ListGroup />
+      <Alert>
+        Hello <span>World</span>
+      </Alert>
     </div>
   );
 }

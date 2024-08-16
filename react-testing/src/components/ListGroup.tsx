@@ -1,8 +1,13 @@
 import { useState } from "react";
 
-function ListGroup() {
-  const items = ["Item 1", "Item 2", "Item 3"];
+// { items : [], heading: string }
+interface ListGroupProps {
+  items: string[];
+  heading: string;
+  onSelectItem: (item: string) => void;
+}
 
+function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {
   // const handleClick = (index: number) => {
   //   selectedIndex = index;
   //   console.log(items[selectedIndex]);
@@ -17,7 +22,7 @@ function ListGroup() {
   return (
     <>
       {/* That angle brackets is called React.Fragments */}
-      <h1>This is the Way</h1>
+      <h1>{heading}</h1>
       <ul className="list-group">
         {items.map((item, index) => (
           <li
@@ -27,7 +32,10 @@ function ListGroup() {
                 ? "list-group-item active"
                 : "list-group-item"
             }
-            onClick={() => changeIndex(index)}
+            onClick={() => {
+              changeIndex(index);
+              onSelectItem(item);
+            }}
           >
             {item}
           </li>
